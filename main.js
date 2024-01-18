@@ -1,12 +1,16 @@
-let firstDigit = 10;
-let secondDigit = 5;
-let operator = "*"
+let firstDigit = [];
+let secondDigit = [];
+let operator = null;
 
 function calculate(a, op, b) {
     total = 0;
     switch(op) {
         case "/":
-            total = a / b;
+            if (b === 0) {
+                total = "ERR"
+            } else {
+                total = a / b;
+            }1
             break;
         case "*":
             total = a * b;
@@ -21,4 +25,24 @@ function calculate(a, op, b) {
     return total;
 }
 
-console.log(calculate(firstDigit, operator, secondDigit));
+const buttonContainer = document.querySelector(".button-container");
+buttonContainer.addEventListener("click", function(event) {
+    if (event.target.classList.contains("number-button")) {
+        if (!operator) {
+            let userNumber = event.target.textContent;
+            firstDigit.push(userNumber);
+            console.log(firstDigit);
+        }
+    }
+})
+
+buttonContainer.addEventListener("click", function(event) {
+    if (event.target.classList.contains("operator-button")) {
+        if (firstDigit) {
+            operator = event.target.textContent;
+            console.log(operator);
+        }
+    }
+})
+
+calculate(firstDigit, operator, secondDigit);
