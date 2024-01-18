@@ -1,0 +1,80 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box
+}
+
+.main-container {
+    background-color: rgb(77, 77, 77);
+    width: 460px;
+    height: 520px;
+    padding: 18px;
+    border-radius: 5px;
+}
+
+.display-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(233, 233, 233);
+    
+}
+
+.display {
+    height: 80px;
+    flex-grow: 1;
+    text-align: end;
+    font-weight: 600;
+    font-size: 60px;
+    margin: 0 10px;
+}
+
+.button-container {
+    margin: 10px 0;
+}
+
+.number-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.button {
+    height: 72px;
+    width: 100px;
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.clear-button {
+    background-color: cornflowerblue;
+}
+
+.number-button {
+    background-color: lightgreen;
+}
+
+.operator-button {
+    background-color: coral;
+}
+
+.no-button {
+    background-color: rgb(77, 77, 77);
+    pointer-events: none;
+    border: none;
+}
+
+#zero {
+    
+}
