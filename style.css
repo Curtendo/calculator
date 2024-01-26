@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
 *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -7,10 +9,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 .main-container {
+    box-shadow: 5px 5px 10px 0px;
     background-color: rgb(77, 77, 77);
     width: 460px;
     height: 520px;
@@ -23,16 +26,26 @@ body {
     justify-content: center;
     align-content: center;
     background-color: rgb(233, 233, 233);
-    
+    box-shadow: inset 2px 2px 2px;
 }
 
 .display {
+    font-family: 'Roboto Mono', monospace;
     height: 80px;
     flex-grow: 1;
-    text-align: end;
     font-weight: 600;
-    font-size: 60px;
+    font-size: 55px;
+    text-shadow: 1px 1px;
     margin: 0 10px;
+}
+
+#operator-display {
+    width: 40px;
+    text-align: start;
+}
+
+#digit-display {
+    text-align: end;
 }
 
 .button-container {
@@ -56,6 +69,10 @@ body {
     cursor: pointer;
 }
 
+.button-pressed {
+    box-shadow: inset 1px 1px;
+}
+
 .clear-button {
     background-color: cornflowerblue;
 }
@@ -74,6 +91,10 @@ body {
     border: none;
 }
 
-#zero {
-    
+#equals {
+    background-color: coral;
+}
+
+#decimal {
+    background-color: lightgreen;
 }
